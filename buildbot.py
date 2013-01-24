@@ -33,6 +33,8 @@ def process_hook():
         subprocess.call(['bash', buildscript])
         return ''
     else:
+        print "Expected buildscript does not exist."
+        print "*** Aborting Build ***"
         return 'denied', 401
 
 if __name__ == '__main__':
